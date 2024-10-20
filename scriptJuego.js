@@ -32,22 +32,22 @@ class Azteca extends Warrior {
     }
 }
 
-// Crear los luchadores
+// Luchadores
 let maya, azteca;
 
-// Función para mostrar mensajes en la consola del juego
+// Para mostrar mensajes en la consola del juego
 function logMessage(message) {
     const consoleElement = document.getElementById("gameConsole");
     consoleElement.innerHTML += `<p>${message}</p>`;
     consoleElement.scrollTop = consoleElement.scrollHeight;
 }
 
-// Función para pedir la acción del usuario
+// Para pedir al usuario la acción
 function getActionMessage(warriorName) {
     return prompt(`${warriorName}, ¿qué quieres hacer? (1: Atacar, 2: Tomar bebida)`);
 }
 
-// Función para iniciar el juego
+//Iniciar el juego
 function iniciarJuego() {
     // Inicializar los guerreros al comienzo de cada juego
     maya = new Maya(100, 25);
@@ -92,7 +92,7 @@ function iniciarJuego() {
         turn++;
     }
 
-    // Determinar el ganador
+    // Resultado
     if (maya.life > 0) {
         logMessage("¡Maya ha ganado!");
     } else if (azteca.life > 0) {
